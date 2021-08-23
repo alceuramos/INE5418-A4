@@ -72,6 +72,12 @@ module.exports = function(server) {
     
                 const num1 = parseFloat(pedido.params.num1);
                 const num2 = parseFloat(pedido.params.num2);
+
+                if (num2 == 0) {
+                    return {
+                        resultado: 'Operação inválida.'
+                    }
+                }
     
                 var data = {
                     resultado: num1 / num2
