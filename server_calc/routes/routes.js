@@ -19,7 +19,7 @@ module.exports = function(server) {
             method: 'GET',
             path: '/calculadora/sum/{num1}/{num2}',
             handler: function (pedido) {
-    
+                
                 const num1 = parseFloat(pedido.params.num1);
                 const num2 = parseFloat(pedido.params.num2);
     
