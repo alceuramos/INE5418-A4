@@ -58,11 +58,11 @@ function request() {
             var data = JSON.parse(ajax.responseText);
             
             if (data.resultado !== null)
-                document.getElementById("result").innerHTML = data.resultado;
+                document.getElementById("result").innerHTML = ' '+data.resultado;
             else
-                document.getElementById("result").innerHTML = 'Operação inválida';
+                document.getElementById("result").innerHTML = ' Operação inválida';
         } else {
-            document.getElementById("result").innerHTML = `<br>Erro ao contectar ao servidor - ${ajax.status}`;
+            document.getElementById("result").innerHTML = ` Erro ao contectar ao servidor - ${ajax.status}`;
         }
     }
 }
